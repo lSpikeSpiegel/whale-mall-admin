@@ -15,6 +15,8 @@ var models = []interface{}{
 	&Product{},
 	&Category{},
 	&CartItem{},
+	&Order{},
+	&OrderItem{},
 	// 后续在这里注册新模型
 }
 

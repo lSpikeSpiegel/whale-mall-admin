@@ -1,7 +1,6 @@
 package controller
 
 import (
-	"fmt"
 	"strconv"
 	"whale/mall/admin/service"
 
@@ -15,7 +14,6 @@ type AddCartRequest struct {
 
 func AddToCart(c *gin.Context) {
 	userId, exist := c.Get("userId")
-	fmt.Println("userId:", userId)
 
 	if !exist {
 		c.JSON(401, gin.H{"error": "unauthorized"})

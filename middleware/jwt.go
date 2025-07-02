@@ -1,7 +1,6 @@
 package middleware
 
 import (
-	"fmt"
 	"strings"
 	"whale/mall/admin/utils"
 
@@ -28,7 +27,6 @@ func JWTAuth() gin.HandlerFunc {
 			return
 		}
 
-		fmt.Println("claims.userId:", claims.UserID)
 		c.Set("userId", claims.UserID)
 		c.Next()
 	}
